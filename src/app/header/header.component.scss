@@ -1,0 +1,112 @@
+section{
+    background-color: #1c1d1e ;
+    margin: 0;
+    height: 60px;
+    padding: 0 30px;
+
+}
+
+//navbar 1
+.navbar1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left{
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+}
+.left img{
+    cursor: pointer;
+}
+.left a{
+    margin-left: 30px;
+}
+.slogan{
+    padding: 15px;
+    color: #7d7d7d;
+}
+.right{
+    display: flex;
+    align-items: center;
+    padding-right: 110px;
+}
+.nav-buttons{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+.register-btn button{
+    border: none;
+    background: none;
+    color: #fff;
+    transition: background-color .2s ease-in-out;
+    font-size: 15px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.login-btn button{
+    background:#f05a22 ;
+    border: none;
+    transition: background-color .2s ease-in-out;
+    color: white;
+    font-size: 15px;
+    min-height: 33.6px;
+    padding: 8px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.lang-btn button{
+    position: relative;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(https://cf.europebet.com/prod/content/documents/images/a88328a1-7b25-433a-a6df-4ed44ab6174f.svg);
+    margin-right: 30px;
+}
+.login-btn img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.promo img{
+    width: 35px;
+    height: 35px;
+    padding: 0 20px;
+}
+
+//navbar2
+
+.navbar2{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 46px;
+    background-color: #25292b;
+}
+
+.links ul {
+    display: flex;
+    align-items: center;
+    padding-left: 130px;
+}
+
+.links ul li{
+    padding: 0 10px;
+    list-style: none;
+}
+
+.links a{
+    text-decoration: none;
+    color: #7d7d7d;
+    cursor: pointer;
+}
+.links a:hover{
+    color: white;
+}

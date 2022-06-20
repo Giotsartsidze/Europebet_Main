@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "europebet-be01c": {
+      "hosting": {
+        "EuropebetWeb": [
+          "europebet-be01c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "europebet-be01c"
+  }
+}

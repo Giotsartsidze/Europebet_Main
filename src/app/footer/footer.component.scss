@@ -1,0 +1,63 @@
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 615px;
+}
+section{
+    background-color: #1c1d1e;
+    padding: 20px;
+    margin: 0;
+    position: relative;
+    width: 97.9%;
+    bottom: 0%;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+}
+
+section h5{
+    color: white;
+}
+
+section li{
+    color: #7d7d7d;
+    cursor: pointer;
+    text-decoration: none;
+    list-style: none;
+}
+section li:hover{
+    color: white;
+}
+
+//sponsors section
+.sponsors{
+    height: 82px;
+    background-color: #1c1d1e;
+}
+
+.sponsors img{
+    width: 90px;
+    height: 40px;
+    padding: 20px;
+    bottom: 0;
+}
+//last section
+.last-sec{
+    height: 145.6px;
+    background-color: #1c1d1e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.last-sec img{
+    width: 90px;
+    height: 20px;
+    padding: 20px;
+    bottom: 0;
+}
+.license{
+    color: #7d7d7d;
+}
+

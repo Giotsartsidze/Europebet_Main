@@ -1,0 +1,331 @@
+//carusel section
+.carusel-container{
+    position:static;
+    margin: auto;
+    text-align: right;
+    max-width: 1560px;
+    width: 100%;
+    // padding-top: 70px;
+    // border-radius: 15px;
+    margin-top: 20px;
+    display: block;
+    
+}
+
+.carusel-container img {
+    display: none;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.carusel-container img.image-active{
+    display:flex;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+}
+
+//dots/indicators
+
+.carusel-dot-container{
+    position: relative;
+    right: 0;
+    // left: 0;
+    bottom: 0;
+    // display: flex;
+    // justify-content: center;
+    padding: 10px;
+    margin-bottom: 1rem;
+    padding-right: 50px;
+}
+.dot{
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    background-color: rgb(158, 158, 158);
+    border-radius: 50%;
+    display: inline-block;
+    transition: opacity 0.6s ease;
+    opacity: 0.1s;
+    
+}
+.active,
+.dot:hover{
+    opacity: 1;
+    background-color: white;
+}
+// image transition fade effect
+// .fade{
+//     animation-name: fade;
+//     animation-duration: 1.5s;
+// }
+
+// @keyframes fade {
+//     from{
+//         opacity: 0.4;
+//     }to{
+//         opacity: 1;
+//     }
+// }
+
+.btn-carusel{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    cursor: pointer;
+}
+
+.btn-prev{
+    left: 50px;
+    top: 100px;
+    bottom: 130px;
+}
+.btn-next{
+    right: -50px;
+    top: 100px;
+    bottom: 130px;
+}
+.icon-carusel{
+    opacity: 0.5;
+    transition: all 0.15s ease;
+}
+
+.icon-carusel:hover{
+    color: #f05a22;
+    opacity: 0.9;
+}
+.icon-carusel:active{
+    opacity: 0.5;
+}
+.icon-next,
+.icon-prev{
+    font-size:45px;
+    right: 0;
+    left: 0;
+}
+
+//section two
+.sec2{
+    display: flex;
+    // flex-direction: row;
+    max-width: 1560px;
+    width: 100%;
+    margin-left: -160px;
+}
+.video{
+    width: 100%;
+    height: 305px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: inline;
+    cursor: pointer;
+    margin-left: 170px;
+    margin-top: 20px;
+    // position: relative;
+  
+}
+.video video{
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+}
+
+.jackpot{
+    display: flex;
+}
+.jackpoti img{
+    object-fit: cover;
+    width:350px;
+    height: 305px;
+    margin-top: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.welcome-bonus{
+    display: flex;
+}
+.welcome img{
+    object-fit: cover;
+    width: 275px;
+    height: 305px;
+    margin-top: 20px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+.card-image{
+    display: flex;
+}
+.payment img{
+    object-fit: cover;
+    width: 280px;
+    height: 305px;
+    margin-top: 20px;
+    margin-right: -150px;
+    border-radius: 5px;
+}
+
+//section 3
+
+.like-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-left: -70px;
+    text-align: center;
+}
+// .buttons{
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: space-evenly;
+// }
+.buttons p{
+    color: #7d7d7d;
+    font-size: 17px;
+    text-align: center;
+    margin-left: 165px;
+    text-overflow: ellipsis;
+}
+.active,
+.buttons p:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.buttons i{
+    display: flex;
+    color: #bbb;
+    font-size: 15px;
+    width: 100%;
+    margin-left: 175px;
+}
+.more p{
+    color: #f05a22;
+    font-size: 15px;
+    text-align: center;
+    text-overflow: ellipsis;
+    margin-right: 185px;
+}
+.more p:hover{
+    text-decoration: dashed;
+    cursor: pointer;
+}
+hr{
+    background-color: grey;
+    height: 0.2px;
+    opacity: 0.2;
+    max-width: 1560px;
+    width: 100%;
+}
+
+.popular-img{
+    // padding-top: 27px;
+    // display: grid;
+    // grid-template-columns: repeat(6,1fr);
+    // grid-template-rows: 1fr;
+    // grid-gap: 0px;
+    // height: 100%;
+    // display: flex;
+    // overflow-x: auto;
+    // overflow-y: hidden;
+    // gap: 1.6rem;
+    // margin-left: 0px;
+    // max-width: 1560px;
+    // width: 100%;
+    // margin-left: 1px;
+    // overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+}
+
+.popular-img img{
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color .15s ease;
+    box-sizing: border-box;
+    padding: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.popular-img img:hover{
+    cursor: pointer;
+    // width: :220px;
+    object-fit:unset;
+}
+
+.discription{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.discription button{
+    background-color: #7d7d7d;
+    color: whitesmoke;
+    border-radius: 15px;
+}
+.discription button:hover{
+    cursor: pointer;
+}
+.discription p{
+    color: #bbb;
+    font-size: 15px;
+}
+.discription p:hover{
+    cursor: pointer;
+}
+
+.games{
+    margin: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.games img{
+    width: 410px;
+    height: 102px;
+}
+.games .slide{
+    transition: 1s;
+}
+
+.games .slide:hover{
+    cursor: pointer;
+    transform: translateY(-20px);
+}
+.text{ 
+    top: 50%;
+    color: #fff;
+    padding: 20px;
+}
+.text h3{ 
+    margin-top: -85px;
+    color: #fff;
+}
+.text h3:hover{
+    transform: translateY(-20px);
+}

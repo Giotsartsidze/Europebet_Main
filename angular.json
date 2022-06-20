@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "EuropebetWeb:build:production",
+            "firebaseProject": "europebet-be01c",
+            "firebaseHostingSite": "europebet-be01c"
+          }
         }
       }
     }
