@@ -47,7 +47,7 @@ export class RegistrationComponent implements OnInit {
         (a: any) =>
           a.userName === this.registrationForm.value.userName ||
           a.email === this.registrationForm.value.email ||
-          a.mobileNumber === this.registrationForm.value.mobileNumber
+          a.mobileNumber == this.registrationForm.value.mobileNumber
       );
       console.log(usernameEmail);
       if (!usernameEmail) {
@@ -60,9 +60,24 @@ export class RegistrationComponent implements OnInit {
         this.closeRegPopup();
         this.showLoginPopup();
       } else {
-        this.registrationForm.controls['userName'].setErrors({
-          taken: true,
-        });
+        if (usernameEmail.userName === this.registrationForm.value.userName) {
+          this.registrationForm.controls['userName'].setErrors({
+            taken: true,
+          });
+        }
+        if (usernameEmail.email === this.registrationForm.value.email) {
+          this.registrationForm.controls['email'].setErrors({
+            emailUsed: true,
+          });
+        }
+        if (
+          usernameEmail.mobileNumber ===
+          this.registrationForm.value.mobileNumber
+        ) {
+          this.registrationForm.controls['mobileNumber'].setErrors({
+            mobilenumberExist: true,
+          });
+        }
       }
     });
   }
