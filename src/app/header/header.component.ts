@@ -1,28 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 import { PopUpService } from '../shared/Popup.service';
-
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  constructor(private shared: PopUpService, private auth: AuthService) {}
 
-  constructor(private shared: PopUpService) { }
+  isDisplay = false;
+  ngOnInit(): void {}
 
-  
-  ngOnInit(): void {
-    
-  }
-  showLoginPopup(){
+  showLoginPopup() {
     this.shared.showLogIn();
   }
 
-  showRegPopup(){
+  showRegPopup() {
     this.shared.showReg();
   }
- 
 
-  
+  toogleDisplay() {
+    this.isDisplay = !this.isDisplay;
+  }
+
+  loggedInUser() {
+    return !!localStorage.getItem('token');
+  }
+
+  logOut() {
+    localStorage.removeItem('token');
+  }
 }

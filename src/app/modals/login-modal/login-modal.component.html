@@ -1,21 +1,26 @@
 <div class="log-in-modal" *ngIf="show">
-    <div class="modal-container">
-        <div class="x-btn" >
-            <h2>შესვლა</h2>
-            <button type="submit" (click)="closeLoginPopup()"><i>&#x2715;</i></button>
+    <div class="modal">
+        <div class="modal-box">
+            <div class="modal-container">
+                <div class="x-btn" >
+                    <h2>შესვლა</h2>
+                    <button type="submit" (click)="closeLoginPopup()"><i>X</i></button>
+                </div>
+            
+                
+                <form action="" [formGroup]="loginForm" (ngSubmit)="login()" >
+                    <input type="text" formControlName="userName" placeholder="მომხმარებლის სახელი/ელფოსტა" >
+                    <span *ngIf="loginForm.controls['userName'].touched && loginForm.hasError('required','userName')" style="color: red; ">აუცილებელი ველი</span>
+                    <input type="password" formControlName="password" placeholder="პაროლი">
+                    <span *ngIf="loginForm.controls['password'].touched && loginForm.hasError('required','password')" style="color: red;">აუცილებელი ველი</span>
+                    <p class="recover">აღდგენა</p>
+                    <button class="login" [disabled]="!loginForm.valid" >შესვლა</button>
+                    <p  class="not-reg">ჯერ არ ხარ რეგისტრირებული?</p>
+                    <p class="reg" (click)="showRegPopup()">რეგისტრაცია</p>
+                </form>
+            </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <form action="" [formGroup]="loginForm" (ngSubmit)="login()" >
-            <input type="text" formControlName="userName" placeholder="მომხმარებლის სახელი/ელფოსტა" >
-            <span *ngIf="loginForm.controls['userName'].touched && loginForm.hasError('required','userName')" style="color: red;">აუცილებელი ველი</span>
-            <input type="password" formControlName="password" placeholder="პაროლი">
-            <span *ngIf="loginForm.controls['password'].touched && loginForm.hasError('required','password')" style="color: red;">აუცილებელი ველი</span>
-            <p class="recover">აღდგენა</p>
-            <button class="login" [disabled]="!loginForm.valid" >შესვლა</button>
-            <p class="not-reg">ჯერ არ ხარ რეგისტრირებული?</p>
-            <a href="" class="reg" (click)="showRegPopup()">რეგისტრაცია</a>
-        </form>
+       
     </div>
+    
 </div>

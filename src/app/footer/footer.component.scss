@@ -1,23 +1,30 @@
+.footer-container{
+    // max-width: 1560px;
+    width: 100%;
+}
 footer{
-    position: relative;
+    // position: relative;
     bottom: 0;
     width: 100%;
-    height: 615px;
+    height: 100%;
 }
 section{
     background-color: #1c1d1e;
-    padding: 20px;
+    padding: 60px;
     margin: 0;
     position: relative;
-    width: 97.9%;
+    // width: 100%;
     bottom: 0%;
     display: flex;
     flex-direction: row;
-    padding-left: 0px;
+    padding: 0 140px;
+    
+    
+    
 }
 
 section h5{
-    color: white;
+    color: #bbb;
 }
 
 section li{
@@ -25,10 +32,30 @@ section li{
     cursor: pointer;
     text-decoration: none;
     list-style: none;
+    opacity: 0.5;
 }
 section li:hover{
-    color: white;
+    opacity: 1;
+    transition: 0.5s;
 }
+ .number{
+    color: white;
+    font-size: 24px;
+    display: flex;
+    padding: 10px;
+}
+.contact button{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin: 30px 0;
+    background-color: #343a3c;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
 
 //sponsors section
 .sponsors{
@@ -37,10 +64,18 @@ section li:hover{
 }
 
 .sponsors img{
-    width: 90px;
-    height: 40px;
-    padding: 20px;
+    width: 120px;
+    height: 90px;
+   opacity: 0.4;
     bottom: 0;
+    // display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+.sponsors img:hover{
+    opacity: 0.9;
+    cursor: pointer;
+    transition: 0.5s;
 }
 //last section
 .last-sec{
@@ -50,14 +85,20 @@ section li:hover{
     align-items: center;
     justify-content: space-between;
 }
+.copy-paste{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .last-sec img{
     width: 90px;
-    height: 20px;
-    padding: 20px;
-    bottom: 0;
+    height: 50px;
+    padding-left: 20px;
+    // bottom: 0;
 }
 .license{
     color: #7d7d7d;
+    padding-left: 70px;
 }
 

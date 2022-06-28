@@ -1,23 +1,37 @@
 <div class="registration-modal" *ngIf="show" >
-    <div class="modal-container">
-        <div class="x-btn" >
-            <h2>რეგისტრაცია</h2>
-            <button type="submit" (click)="closeRegPopup()"><i>&#x2715;</i></button>
+    <div class="modal">
+        <div class="modal-box">
+            <div class="modal-container">
+                <div class="img-container">
+                    <img src="https://cf.europebet.com/prod/content/documents/images/ace35450-255c-440c-99d2-d52199a88b1d.jpeg" alt="">
+                </div>
+                    <div class="reg-container">
+                       <div class="sing-up-content">
+                            <div class="x-btn" >
+                                <h2>რეგისტრაცია</h2>
+                                <button type="submit" (click)="closeRegPopup()"><i>X</i></button>
+                            </div>
+                            <a (click)="showLoginPopup()">მაქვს ანგარიში</a>
+                            <br>
+                            <br>
+                            <br>
+                            <form  [formGroup]="registrationForm" (ngSubmit)="checkuserNamemail()">
+                                <input type="text" formControlName="userName" placeholder="მომხმარებლი" >
+                                <span *ngIf="registrationForm.controls['userName'].touched && registrationForm.hasError('required','userName')" style="color: red;">აუცილებელი ველი</span>
+                                <span *ngIf="registrationForm.controls['userName'].hasError('taken')" style="color: red;">მომხმარებელი უკვე არსებობს</span>
+                                <input type="tel"  formControlName="mobileNumber" placeholder="მობ. ნომერი">
+                                <span *ngIf="registrationForm.controls['mobileNumber'].touched && registrationForm.hasError('required','mobileNumber')" style="color: red;">აუცილებელი ველი</span>
+                                <span *ngIf="registrationForm.controls['mobileNumber'].hasError('mobilenumberExist')" style="color: red;">მობილური ნომერი უკვე გამოყენებულია</span>
+                                <input type="mail" formControlName="email" placeholder="ელფოსტა">
+                                <span *ngIf="registrationForm.controls['email'].touched && registrationForm.hasError('required','email')" style="color: red;">აუცილებელი ველი</span>
+                                <span *ngIf="registrationForm.controls['email'].hasError('emailUsed')" style="color: red;">მეილი დაკავებულია</span>
+                                <input type="password" formControlName="password"  placeholder="პაროლი">
+                                <span *ngIf="registrationForm.controls['password'].touched && registrationForm.hasError('required','password')" style="color: red;">აუცილებელი ველი</span>
+                                <button [disabled]="!registrationForm.valid " >რეგისტრაცია</button>
+                            </form>
+                        </div>
+                    </div> 
+            </div>
         </div>
-        <p>მაქვს ანგარიში</p>
-        <br>
-        <br>
-        <br>
-        <form  [formGroup]="registrationForm" (ngSubmit)="register()">
-            <input type="text" formControlName="userName" placeholder="მომხმარებლი" >
-            <span *ngIf="registrationForm.controls['userName'].touched && registrationForm.hasError('required','userName')" style="color: red;">აუცილებელი ველი</span>
-            <input type="tel"  formControlName="mobileNumber" placeholder="მობილური">
-            <span *ngIf="registrationForm.controls['mobileNumber'].touched && registrationForm.hasError('required','mobileNumber')" style="color: red;">აუცილებელი ველი</span>
-            <input type="mail" formControlName="email" placeholder="ელფოსტა">
-            <span *ngIf="registrationForm.controls['email'].touched && registrationForm.hasError('required','email')" style="color: red;">აუცილებელი ველი</span>
-            <input type="password" formControlName="password"  placeholder="პაროლი">
-            <span *ngIf="registrationForm.controls['password'].touched && registrationForm.hasError('required','password')" style="color: red;">აუცილებელი ველი</span>
-            <button [disabled]="!registrationForm.valid" >რეგისტრაცია</button>
-        </form>
     </div>
 </div>

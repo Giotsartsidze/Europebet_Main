@@ -1,0 +1,93 @@
+.container{
+    width: calc(100% - 325px);
+    height: 700px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    background-color: #25292b;
+    padding: 25px 30px;
+    border-radius: 18px;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h2{
+    color: white;
+    
+}
+
+.icon img{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    border-radius: 40px;
+    background-color: #2d2d2d;
+    position: relative;
+    
+}
+.username h1{
+    color: white;
+}
+.username p{
+    color: white;
+}
+h3{
+    color: white;
+}
+.bonus h3{
+    color: green;
+}
+p{
+    color: #7d7d7d;
+    font-size: 20px;
+}
+.btns{
+    padding-top: 40px;
+    display: flex;
+    
+    justify-content: start;
+    align-items: center;
+}
+.deposite{
+    width: 250px;
+    height: 100%;
+    font-size: 22px;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.withdraw{
+    width: 250px;
+    height: 100%;
+    font-size: 22px;
+    background-color: #2d2d2d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+.promos{
+    padding-top: 20px;
+}
+.promos p{
+    
+    color: #7d7d7d;
+}
+.promos p span{
+    color: #f05a22;
+}
+
+.bonuses{
+    padding-top: 15px;
+}
+.bonuses p{
+    color: #7d7d7d;
+  
+}
+
+hr{
+    opacity: 0.2;
+}

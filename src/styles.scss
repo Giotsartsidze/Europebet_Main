@@ -1,9 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+.page-wrapper{
+    max-width: 1560px;
+    // padding: 0 100px;
+    margin: auto;
+}
 body{
     margin: 0;
     padding: 0;
-    min-width: 1024px;
+   
+    width: 100%;
     font-family: helvetica-geo-roman,Arial;
-    
-     background-color: #171718;
+    background-color: #171718;
  }
+
+ 

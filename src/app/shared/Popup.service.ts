@@ -2,37 +2,41 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PopUpService {
-  
+  constructor() {}
+  showLoginModal$ = new Subject<boolean>();
+  showRegModal$ = new Subject<boolean>();
+  showWelcomeBonusModal$ = new Subject<boolean>();
 
-  constructor() { }
-    showLoginModal$ = new Subject<boolean>();
-    showRegModal$ = new Subject<boolean>();
-  
-
-  showLogIn(){
+  showLogIn() {
     this.showLoginModal$.next(true);
   }
 
-  closeLogIn(){
+  closeLogIn() {
     this.showLoginModal$.next(false);
-  
   }
-  showReg(){
+  showReg() {
     this.showRegModal$.next(true);
   }
 
-  closeReg(){
+  closeReg() {
     this.showRegModal$.next(false);
-  
   }
 
-  getLogInModalStatus(){
+  showWelcome() {
+    this.showWelcomeBonusModal$.next(true);
+  }
+
+  closeWelcome() {
+    this.showWelcomeBonusModal$.next(false);
+  }
+
+  getLogInModalStatus() {
     return this.showLoginModal$.asObservable();
   }
-  getRegInModalStatus(){
+  getRegInModalStatus() {
     return this.showRegModal$.asObservable();
   }
 }

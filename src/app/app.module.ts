@@ -9,9 +9,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { LoginModalComponent } from './modals/login-modal/login-modal.component';
 import { RegistrationComponent } from './modals/registration/registration.component';
-import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './auth.service';
+import { PersonalInfoComponent } from './personal-info/personal-info.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -21,17 +22,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     LoginModalComponent,
     RegistrationComponent,
+    PersonalInfoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
- 
-
+    HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AuthService, AuthGuard],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
+export class AppModule {}

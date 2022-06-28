@@ -1,3 +1,4 @@
+<div class="header-container" >
 <section>
     <div class="navbar1">
         <div class="left">
@@ -12,19 +13,35 @@
             </div>
         </div>
         <div class="right">
-            <div class="nav-buttons">
+            <div class="nav-buttons" *ngIf="!loggedInUser()">
                 <div class="register-btn">
                     <button type="button" (click)="showRegPopup()"><span>რეგისტრაცია</span></button>
                 </div>
                 <div class="login-btn" >
                     <button type="button" (click)="showLoginPopup()">
-                        <span><i><img src="https://cdn-icons.flaticon.com/png/512/3945/premium/3945597.png?token=exp=1655204834~hmac=1fb646f501df497a7ce91857a6243bff" alt=""></i>შესვლა</span>
+                        <span><i><img src="https://www.svgrepo.com/show/30377/user.svg" alt=""></i>შესვლა</span>
                     </button>
-                    
                 </div>
             </div>
+            <div class="nav-buttons" *ngIf="loggedInUser()">
+                <div class="register-btn">
+                    <button type="button" routerLink="personalInfo"><span style="color: green;">პირადი ინფორმაცია</span></button>
+                </div>
+                <div class="login-btn" >
+                    <button type="button" (click)="logOut()" routerLink="">
+                        <span><i><img src="https://cdn-icons.flaticon.com/png/512/3945/premium/3945597.png?token=exp=1655204834~hmac=1fb646f501df497a7ce91857a6243bff" alt=""></i>გამოსვლა</span>
+                    </button>
+                </div>
+            </div>
+            
             <div class="lang-btn">
-                <button></button>
+                <button (click)="toogleDisplay()"></button>
+                <div class="toogle" *ngIf="isDisplay" style="background-color: #25292b;top: 45px; min-width: 135px;  overflow:auto; padding-top: 15px; padding-bottom: 15px; right: 20px;" >
+                    <div  class="language-select-item  " style="display: block;"><span  class="language-item-img" style="background-image: url(&quot;https://cf.europebet.com/prod/content/documents/images/fc3a1308-7142-410e-8c21-8586db2ff85d.svg&quot;);"></span><span  class="language-item-text">English</span></div>
+                    <div  class="language-select-item  " style="display: block;"><span  class="language-item-img" style="background-image: url(&quot;https://cf.europebet.com/prod/content/documents/images/4a63ec39-486c-4533-841d-965277b882e6.svg&quot;);"></span><span  class="language-item-text">Русский</span></div>
+                    <div  class="language-select-item " style="display: block;"><span   class="language-item-img" style="background-image: url(&quot;https://cf.europebet.com/prod/content/documents/images/cf784638-8c4d-4e3b-b32f-27a39a8c5606.png&quot;);"></span><span class="language-item-text">Türkçe</span></div>
+                </div>
+                
             </div>
         </div>
     </div>   
@@ -47,4 +64,5 @@
             </ul>
         </div>
     </div>
+</div>
 </div>
